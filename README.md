@@ -1,4 +1,4 @@
-# INTE-11223-Programing-Concepts course module
+# INTE-11223-Programing Concepts course module
 C++ Projects
 Level-01
 Semester 1
