@@ -12,8 +12,7 @@
   j) Write a series of statements that determine and print the smallest value in t.
   k) Write a statement that displays the elements of the first row of t.
   l) Write a statement that totals the elements of the fourth column of t.
-  m) Write a series of statements that print the array t in tabular format. List the column
-  subscripts as headings across the top and list the row subscripts at the left of each
+  m) Write a series of statements that print the array t in tabular format. List the column subscripts as headings across the top and list the row subscripts at the left of each
   row.
   
 2. Airline Reservations System
