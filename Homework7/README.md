@@ -15,6 +15,7 @@
   m) Write a series of statements that print the array t in tabular format. List the column
   subscripts as headings across the top and list the row subscripts at the left of each
   row.
+  
 2. Airline Reservations System
 
   A small airline has just purchased a computer for its new automated reservations
