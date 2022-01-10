@@ -1,26 +1,22 @@
-//Program for count the total number of words in a Text
-using namespace std;
+//function which will take pointer and display the number on screen
+
 #include <iostream>
-#include <cstring>
+using namespace std;
 
-int main() 
+int printnum(int num)	//function decaration
 {
-	char S[100], *token; //Variable declaration
-	int count = 0;
+    int *nptr;
+    nptr = &num;
+    cout<<"Output : "<<*nptr;
+}
 
-	//Input the string
-	cout << "Enter a string :";
-	cin.getline(S, 100);
+int num;
 
- 	token = strtok(S, " ");
+int main()
+{
+    int input;
 
- 	//Count the word 
- 	while(NULL != token)
- 	{
- 		count++;
- 		token = strtok(NULL, " ");
- 	}
-
- 	cout << "Word Count : "<<count;
- 	return 0;
+    cout<<"Enter the value : ";
+    cin>>num;
+    printnum(num); //function call
 }

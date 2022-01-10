@@ -1,34 +1,19 @@
-//program that uses function strcmp to compare two strings input
+//program to print a number which is entered from keyboard using pointer
 
-#include <iostream>
-#include <string.h>
-
+#include<iostream>
 using namespace std;
 
-int main() 
+int main()
 {
-	char str1[100], str2[100];
-	 
-	cout<<"Input string 1 : ";
-	cin.getline(str1, 100);
-	 
-	cout<<"Input string 2 : ";
-	cin.getline(str2, 100);
-	 
-	int compare = strcmp(str1, str2);
-	cout<<endl;
-	 
-	if(compare==0)
-	{
-		cout<<"String are equal!"<<endl;
-	}
-	else if(compare==1)
-	{
-		cout<<"String 1 is greater than string 2!"<<endl;
-	}
-	 else if(compare==-1)
-	{
-		cout<<"String 1 is less than string 2!"<<endl;
-	}
-	return 0;
+	int num;
+	int *nptr;
+	
+	cout<<"Enter the number:";
+	cin>>num;
+	
+	nptr= &num;
+	
+	cout<<"Entered Number:"<<*nptr<<endl;
+	return 0;	
+	
 }

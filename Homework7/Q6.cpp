@@ -1,70 +1,63 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-int main() 
+int main()
 {
-	//Define a 2D array for the distances
-	int distance[4][4]={{0,78,124,113},{78,0,184,38},{124,184,0,222},{113,38,222,0} };
-	int curloc; //Current Location
-	int dest;	//Destination
-	int totd;	//Total Trip Distance
+	//variables
+    int a,b,c; 
+    int *p1,*p2,*p3; //pointers
+    
+    //user inputs
+    cout << "Enter 1st Number: ";
+    cin >> a;
+	cout << "Enter 2nd Number: ";
+    cin >> b;
+    cout << "Enter 3rd Number: ";
+    cin >> c;
 	
-	//User Interface
-	cout<<"----Welcome to Trip Advisor----"<<endl;
-	cout<<"==============================="<<endl;
-	
-	cout<<"Enter 1 for select Colombo"<<endl;
-	cout<<"Enter 2 for select Gampaha"<<endl;
-	cout<<"Enter 3 for select Galle"<<endl;
-	cout<<"Enter 4 for select Kandy"<<endl<<endl;
-	
-	cout<<"\n"<<"Please enter your current location :";
-	cin>>curloc;
-	
-	curloc -=1;
-	cout<<"Please enter destination :";
-	cin>>dest;
-	
-	dest -=1;
-	
-	while(!(0<=curloc && curloc<=3 && 0<=dest && dest<=3))
+	//assign addresses of user inputs
+    p1 = &a;
+    p2 = &b;
+    p3 = &c;
+    
+    //greatest value
+    if (*p1 > *p2)
 	{
-		cout<<"Please enter your current location :";
-		cin>>curloc;
-		curloc -=1;
-		cout<<"Please enter destination :";
-		cin>>dest;
-		dest -=1;
+		if (*p1 > *p3)
+		{
+			cout << "Greatest:  " << *p1 << endl;
+		}
+		else
+		{
+			cout << "Greatest:  " << *p3 << endl;
+		}
 	}
-	
-	totd = distance[curloc][dest];
-	
-	char resp; //User Response
-	cout<<endl;
-	cout<<"Do you want to continue? If yes, Press 'Y'. If no, press 'N' :";
-	cin>>resp;
-	
-	while(!(resp=='y'||resp=='Y'||resp=='n'||resp=='N'))	//Check the validity of the input
+	else
 	{
-		cout<<"Invalid Response. Please enter response again!"<<endl;
-		cout<<"Do you want to continue? If yes, Press 'Y'. If no, press 'N' :";
-		cin>>resp;
-	}
-	
-	while(resp=='Y' || resp=='y')
-	{
-		curloc = dest;
-		cout<<"Enter the next destination :";
-		cin>>dest;
-		dest-=1;
+		if (*p2 > *p3)
+		{
+			cout << "Greatest:  " << *p2 << endl;
+		}
+		else
+		{
+			cout << "Greatest:  " << *p3 << endl;
+		}
 		
-		totd += distance[curloc][dest];	//Count Total Distance
+	} 
 	
-		cout<<"Do you want to continue? If yes, Press 'Y'. If no, press 'N' :";
-		cin>>resp;
+	//smallest value
+	if ( *p1 < *p2 && *p1 < *p3 ) 
+	{
+		cout << "Smallest:  " << *p1 << endl;
 	}
-	
-	cout<<endl;
-	cout<<"Total distance is :"<<totd<<endl;
-	return 0;
+	if ( *p2 < *p1 && *p2 < *p3 ) 
+	{
+		cout << "Smallest:  " << *p2 << endl;
+	}
+	if ( *p3 < *p1 && *p3 < *p1 ) 
+	{
+		cout << "Smallest:  " << *p3 << endl;
+	}
+   
+    return 0;
 }
