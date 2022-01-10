@@ -1,19 +1,35 @@
-//program to print a number which is entered from keyboard using pointer.
+//Program for Output the line in uppercase letters and in lowercase letters
 
-#include<iostream>
 using namespace std;
+#include<iostream>
+#include<cstring>
 
 int main()
 {
-	int num;	//entered value
-	int *nptr;	//Pointer for entered value
+    char s[100];
 	
-	cout<<"Enter the value:";
-	cin>>num;
+	cout<<"input text line "<<endl;
+	cin.getline(s,100);
+	cout<<endl<<endl;
 	
-	nptr= &num;	//Address of enterd value assigning into pointer
+	int length=strlen(s);
+	cout<<"text in upper letters : ";
 	
-	//print the value of address of the pointer
-	cout<<"Value of the adress of the Pointer:"<<*(&nptr)<<endl;
-	return 0;
+	//Convert String into Upper chartactors.
+	for(int i=0;i<length;i++){
+		if(s[i]>=97 && s[i]<=122){
+			s[i]-=32;
+		}
+	}
+	cout<<s<<endl<<endl;
+	
+	//Convert String into Lower chartactors.
+	cout<<"text in lower letters : ";
+	for(int i=0;i<length;i++){
+		if(s[i]>=65 && s[i]<=90){
+			s[i]+=32;
+		}
+	}
+	cout<<s<<endl<<endl;
+	
 }
