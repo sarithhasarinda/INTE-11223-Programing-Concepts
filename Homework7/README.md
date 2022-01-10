@@ -1,16 +1,29 @@
 1. Consider a 2-by-5 integer array t.
+
   a) Write a definition for t.
+  
   b) How many rows does t have?
+  
   c) How many columns does t have?
+ 
   d) How many elements does t have?
+  
   e) Write the names of all the elements in the second row of t.
+  
   f) Write the names of all the elements in the third column of t.
+  
   g) Write a single statement that sets the element of t in row 1 and column 2 to zero.
+  
   h) Write a nested for statement that initializes each element of t to zero.
+  
   i) Write a statement that inputs the values for the elements of t from the terminal.
+  
   j) Write a series of statements that determine and print the smallest value in t.
+  
   k) Write a statement that displays the elements of the first row of t.
+  
   l) Write a statement that totals the elements of the fourth column of t.
+  
   m) Write a series of statements that print the array t in tabular format. List the column
   subscripts as headings across the top and list the row subscripts at the left of each
   row.
